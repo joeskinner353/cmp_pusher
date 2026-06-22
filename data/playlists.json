@@ -1,5 +1,5 @@
 {
-  "heroTitle": "Pusher + Concord",
+  "heroTitle": "Concord + Pusher",
   "heroSubtitle": "Original Music for Film & TV ",
   "playlists": [
     {
@@ -15,12 +15,12 @@
     },
     {
       "id": "2",
-      "title": "Playlist 2:Electronic Essentials",
-      "subtitle": "Timeless tracks from electronic music pioneers",
-      "description": "From early synth explorations to contemporary productions, this playlist charts the evolution of electronic music. Essential listening for anyone interested in the genre's rich history and ongoing innovation.",
-      "platform": "spotify",
-      "embedUrl": "https://open.spotify.com/embed/playlist/37i9dQZF1DX4dyzvuaRJ0n",
-      "externalUrl": "https://open.spotify.com/playlist/37i9dQZF1DX4dyzvuaRJ0n",
+      "title": "Baz Kaye",
+      "subtitle": "subtitle",
+      "description": "Producer and multi-instrumental Baz Kaye [Bondax, Jessie Ware, Maribou State] teams up with collaborator Pete O'Brien to create a mix of cinematic instrumental pieces and driving indie rock. ",
+      "platform": "disco",
+      "embedUrl": "https://concord-music-publishing.disco.ac/e/p/29703783?download=true&territory_ids=%5B2877086%5D&s=YeaNn6NYv5HVU4TXRFSMHmd8VGo%3AyIvNFVWe&artwork=true&color=%234E98FF&theme=dark",
+      "externalUrl": "https://concord-music-publishing.disco.ac/e/p/29703783?download=true&territory_ids=%5B2877086%5D&s=YeaNn6NYv5HVU4TXRFSMHmd8VGo%3AyIvNFVWe&artwork=true&color=%234E98FF&theme=dark",
       "genres": ["electronic", "idm", "techno"],
       "moods": ["energetic", "uplifting"]
     },
