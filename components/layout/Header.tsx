@@ -23,6 +23,10 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-6">
             <Link
               href="#playlists"
+              onClick={() => {
+                // Dispatch custom event to minimize playlists
+                window.dispatchEvent(new CustomEvent('minimizePlaylists'));
+              }}
               className="text-sm text-gray-400 hover:text-gray-100 transition-colors duration-200"
             >
               Playlists

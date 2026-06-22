@@ -2,7 +2,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Playlist } from '@/types/playlist';
 import { PlaylistHeader } from './PlaylistHeader';
 import { PlaylistMeta } from './PlaylistMeta';
@@ -17,14 +17,23 @@ interface PlaylistSectionProps {
   playlist: Playlist;
   onOpenFocus?: () => void;
   className?: string;
+  shouldMinimize?: boolean;
 }
 
 export function PlaylistSection({
   playlist,
   onOpenFocus,
   className,
+  shouldMinimize,
 }: PlaylistSectionProps) {
   const [isExpanded, setIsExpanded] = useState(true);
+
+  // Minimize when shouldMinimize prop changes to true
+  useEffect(() => {
+    if (shouldMinimize) {
+      setIsExpanded(false);
+    }
+  }, [shouldMinimize, playlist.title]);
 
   return (
     <ScrollReveal>

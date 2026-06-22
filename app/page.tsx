@@ -2,7 +2,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/layout/Hero';
@@ -187,6 +187,7 @@ const _examplePlaylists: Playlist[] = [
 export default function Home() {
   const [focusPlaylist, setFocusPlaylist] = useState<Playlist | null>(null);
   const [isFocusOpen, setIsFocusOpen] = useState(false);
+  const [minimizeAll, setMinimizeAll] = useState(false);
 
   const openFocusMode = (playlist: Playlist) => {
     setFocusPlaylist(playlist);
@@ -197,6 +198,18 @@ export default function Home() {
     setIsFocusOpen(false);
     setTimeout(() => setFocusPlaylist(null), 300);
   };
+
+  // Listen for minimize playlists event
+  useEffect(() => {
+    const handleMinimizePlaylists = () => {
+      setMinimizeAll(true);
+      // Reset after components have time to respond
+      setTimeout(() => setMinimizeAll(false), 500);
+    };
+
+    window.addEventListener('minimizePlaylists', handleMinimizePlaylists);
+    return () => window.removeEventListener('minimizePlaylists', handleMinimizePlaylists);
+  }, []);
 
   return (
     <>
@@ -214,6 +227,7 @@ export default function Home() {
               key={playlist._id}
               playlist={playlist}
               onOpenFocus={() => openFocusMode(playlist)}
+              shouldMinimize={minimizeAll}
             />
           ))}
         </div>
