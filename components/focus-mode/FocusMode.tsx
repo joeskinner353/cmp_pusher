@@ -9,8 +9,8 @@ import { PlaylistHeader } from '@/components/playlist/PlaylistHeader';
 import { PlaylistMeta } from '@/components/playlist/PlaylistMeta';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils/cn';
-import Image from 'next/image';
-import { urlFor } from '@/lib/sanity/client';
+// import Image from 'next/image';
+// import { urlFor } from '@/lib/sanity/client';
 import { useEffect } from 'react';
 
 interface FocusModeProps {
@@ -54,8 +54,8 @@ export function FocusMode({ playlist, isOpen, onClose }: FocusModeProps) {
           className="fixed inset-0 z-50 flex items-center justify-center"
           onClick={onClose}
         >
-          {/* Background Overlay with Artwork */}
-          {backgroundImage && (
+          {/* Background Overlay with Artwork - requires Sanity CMS */}
+          {/* {backgroundImage && (
             <div className="absolute inset-0">
               <Image
                 src={urlFor(backgroundImage).width(1920).blur(200).url()}
@@ -66,7 +66,10 @@ export function FocusMode({ playlist, isOpen, onClose }: FocusModeProps) {
               />
               <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/90 to-black" />
             </div>
-          )}
+          )} */}
+
+          {/* Simple dark background */}
+          <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/90 to-black" />
 
           {/* Close Button */}
           <button
@@ -112,7 +115,8 @@ export function FocusMode({ playlist, isOpen, onClose }: FocusModeProps) {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                 {/* Left: Artwork & Info */}
                 <div className="space-y-6">
-                  {playlist.artwork && (
+                  {/* Artwork hidden - requires Sanity CMS */}
+                  {/* {playlist.artwork && (
                     <motion.div
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
@@ -128,7 +132,7 @@ export function FocusMode({ playlist, isOpen, onClose }: FocusModeProps) {
                         priority
                       />
                     </motion.div>
-                  )}
+                  )} */}
 
                   <motion.div
                     initial={{ y: 20, opacity: 0 }}

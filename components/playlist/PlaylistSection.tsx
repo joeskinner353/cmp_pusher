@@ -10,8 +10,8 @@ import { PlaylistPlayer } from '@/components/players/PlaylistPlayer';
 import { Button } from '@/components/ui/Button';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
 import { cn } from '@/lib/utils/cn';
-import Image from 'next/image';
-import { urlFor } from '@/lib/sanity/client';
+// import Image from 'next/image';
+// import { urlFor } from '@/lib/sanity/client';
 
 interface PlaylistSectionProps {
   playlist: Playlist;
@@ -123,7 +123,8 @@ export function PlaylistSection({
 
             {/* Right Column: Player */}
             <div className="space-y-4">
-              {playlist.artwork && (
+              {/* Artwork hidden - requires Sanity CMS */}
+              {/* {playlist.artwork && (
                 <div className="relative aspect-square w-full max-w-md mx-auto lg:hidden rounded-lg overflow-hidden">
                   <Image
                     src={urlFor(playlist.artwork).width(800).url()}
@@ -133,7 +134,7 @@ export function PlaylistSection({
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-              )}
+              )} */}
 
               <PlaylistPlayer
                 id={playlist._id}
