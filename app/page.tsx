@@ -9,9 +9,14 @@ import { Hero } from '@/components/layout/Hero';
 import { PlaylistSection } from '@/components/playlist/PlaylistSection';
 import { FocusMode } from '@/components/focus-mode/FocusMode';
 import { Playlist } from '@/types/playlist';
+import { getPlaylists, getHeroText } from '@/lib/data/playlists';
 
-// Example playlists data (will be replaced with Sanity CMS data)
-const examplePlaylists: Playlist[] = [
+// Load playlists from JSON file
+const playlists = getPlaylists();
+const heroText = getHeroText();
+
+// OLD hardcoded data below - can be deleted
+const _examplePlaylists: Playlist[] = [
   {
     _id: '1',
     _type: 'playlist',
@@ -199,12 +204,12 @@ export default function Home() {
       
       <main className="flex-1">
         <Hero
-          title="Discover Music"
-          subtitle="Curated playlists for every mood and moment"
+          title={heroText.title}
+          subtitle={heroText.subtitle}
         />
 
         <div id="playlists" className="scroll-mt-20">
-          {examplePlaylists.map((playlist) => (
+          {playlists.map((playlist) => (
             <PlaylistSection
               key={playlist._id}
               playlist={playlist}

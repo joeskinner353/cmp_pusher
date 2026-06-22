@@ -1,115 +1,97 @@
 # Pusher - Premium Music Discovery Platform
 
-A production-ready, scalable music discovery and playlist showcase website built with Next.js 14, TypeScript, Tailwind CSS, Framer Motion, and Sanity CMS.
+A production-ready, scalable music discovery and playlist showcase website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
 
 ## 🎵 Features
 
 - **Multi-Platform Playlist Support**: Spotify, Apple Music, SoundCloud, YouTube Music, and DISCO
-- **Focus Mode**: Immersive fullscreen experience for each playlist
-- **Playback Management**: Intelligent cross-platform playback control
 - **Premium Design**: Dark-mode optimized with sophisticated animations
 - **Fully Responsive**: Beautiful experience on all devices
-- **CMS-Powered**: Non-technical content management via Sanity
+- **Simple JSON Editing**: No CMS required - just edit a JSON file
 - **Performance Optimized**: Lazy loading, code splitting, and optimized images
 - **Accessible**: WCAG compliant with keyboard navigation and screen reader support
 
 ## 🚀 Quick Start
 
-### Prerequisites
-
-- Node.js 18+ 
-- npm or yarn
-- A Sanity account (free at [sanity.io](https://www.sanity.io))
-
 ### Installation
 
-1. **Install dependencies**
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-2. **Set up Sanity CMS**
-   
-   a. Create a new Sanity project at [sanity.io](https://www.sanity.io)
-   
-   b. Copy `.env.local.example` to `.env.local`
-   ```bash
-   cp .env.local.example .env.local
-   ```
-   
-   c. Update `.env.local` with your Sanity credentials:
-   ```
-   NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
-   NEXT_PUBLIC_SANITY_DATASET=production
-   ```
+### Run Development Server
 
-3. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-   
-   Open [http://localhost:3000](http://localhost:3000) to view the site.
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## ✏️ Editing Content
+
+**All your playlists and site text are in one file:** `data/playlists.json`
+
+See [HOW_TO_EDIT.md](HOW_TO_EDIT.md) for detailed instructions on:
+- Changing the hero title and subtitle
+- Adding/editing/deleting playlists
+- Getting embed URLs from Spotify, Apple Music, etc.
+- Common mistakes and troubleshooting
+
+### Quick Example
+
+```json
+{
+  "heroTitle": "Your Site Title",
+  "heroSubtitle": "Your tagline",
+  "playlists": [
+    {
+      "id": "1",
+      "title": "My Playlist",
+      "description": "Description here...",
+      "platform": "spotify",
+      "embedUrl": "https://open.spotify.com/embed/playlist/...",
+      "genres": ["electronic"],
+      "moods": ["energetic"]
+    }
+  ]
+}
+```
 
 ## 📁 Project Structure
 
 ```
 pusher_site/
 ├── app/                      # Next.js App Router
-│   ├── layout.tsx           # Root layout
-│   ├── page.tsx             # Homepage
-│   └── globals.css          # Global styles
-├── components/
-│   ├── layout/              # Header, Footer, Hero
-│   ├── playlist/            # Playlist components
-│   ├── players/             # Platform-specific players
-│   ├── focus-mode/          # Focus mode experience
-│   ├── ui/                  # Reusable UI components
-│   └── animations/          # Framer Motion components
-├── lib/
-│   ├── sanity/              # Sanity client & schemas
-│   ├── playback/            # Playback controller
-│   ├── hooks/               # Custom React hooks
-│   └── utils/               # Utility functions
-├── styles/                  # Design tokens & animations
-├── types/                   # TypeScript definitions
-├── public/                  # Static assets
-└── docs/                    # Documentation
+├── components/               # React components
+├── data/
+│   └── playlists.json       # ← EDIT THIS FILE for content
+├── lib/                      # Utilities and helpers
+├── styles/                   # Design tokens & animations
+├── types/                    # TypeScript definitions
+└── docs/                     # Documentation
 ```
 
-## 🚀 Deployment
+## 🚀 Deployment to Netlify
 
-### Deploy to Netlify
+1. **Push to GitHub**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
 
-1. **Connect Repository**
+2. **Connect to Netlify**
    - Log into [Netlify](https://app.netlify.com)
    - Click "Add new site" → "Import an existing project"
-   - Connect your Git repository
+   - Select your repository
 
-2. **Configure Build Settings**
+3. **Deploy**
    - Build command: `npm run build`
    - Publish directory: `.next`
-
-3. **Set Environment Variables**
-   - Go to Site settings → Environment variables
-   - Add your Sanity credentials
-
-4. **Deploy**
    - Click "Deploy site"
 
-## 📝 Content Management
-
-### Adding Playlists
-
-1. Set up Sanity Studio (see docs/CONTENT_MANAGEMENT.md)
-2. Create playlists via the CMS
-3. Content automatically syncs to your site
-
-## 📚 Documentation
-
-- [Architecture Overview](docs/ARCHITECTURE.md)
-- [Deployment Guide](docs/DEPLOYMENT.md)
-- [Content Management Guide](docs/CONTENT_MANAGEMENT.md)
-- [Development Roadmap](docs/ROADMAP.md)
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for detailed instructions.
 
 ## 🛠️ Development
 
@@ -119,6 +101,22 @@ npm run build        # Build for production
 npm run start        # Start production server
 npm run lint         # Run ESLint
 ```
+
+## 📚 Documentation
+
+- [HOW_TO_EDIT.md](HOW_TO_EDIT.md) - **Content editing guide** ← Start here!
+- [SETUP.md](SETUP.md) - Complete setup instructions
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) - System architecture
+- [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) - Deployment guide
+- [docs/ROADMAP.md](docs/ROADMAP.md) - Feature roadmap
+
+## 🎨 Features Hidden (But Available)
+
+The following features are built-in but currently hidden:
+- **Tags** - Hashtag-style playlist tags (code in `components/playlist/PlaylistMeta.tsx`)
+- **Focus Mode** - Fullscreen playlist view (code in `components/focus-mode/FocusMode.tsx`)
+
+To re-enable, uncomment the code in those files.
 
 ## 📄 License
 

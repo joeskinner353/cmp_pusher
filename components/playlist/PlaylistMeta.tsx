@@ -22,11 +22,12 @@ export function PlaylistMeta({
   platform,
   className,
 }: PlaylistMetaProps) {
-  const hasMetadata = genres?.length || moods?.length || tags?.length;
+  const hasMetadata = false; // All metadata hidden
 
   return (
     <div className={cn('space-y-4', className)}>
-      {hasMetadata && (
+      {/* All tags/genres/moods hidden - code kept for future use */}
+      {/* {hasMetadata && (
         <div className="flex flex-wrap gap-2">
           {genres?.map((genre) => (
             <Tag key={genre} variant="default">
@@ -44,9 +45,10 @@ export function PlaylistMeta({
             </Tag>
           ))}
         </div>
-      )}
+      )} */}
 
-      {externalUrl && (
+      {/* External link hidden - code kept for future use */}
+      {/* {externalUrl && (
         <a
           href={externalUrl}
           target="_blank"
@@ -71,7 +73,7 @@ export function PlaylistMeta({
             />
           </svg>
         </a>
-      )}
+      )} */}
     </div>
   );
 }

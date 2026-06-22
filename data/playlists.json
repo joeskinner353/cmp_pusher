@@ -1,0 +1,72 @@
+{
+  "heroTitle": "Pusher + Concord",
+  "heroSubtitle": "Original Music for Film & TV ",
+  "playlists": [
+    {
+      "id": "1",
+      "title": "Playlist 1",
+      "subtitle": "Subtitle",
+      "description": "A carefully curated selection of ambient and atmospheric music designed to create the perfect environment for concentration, meditation, or simply letting your mind wander. Featuring artists who push the boundaries of sonic exploration.",
+      "platform": "spotify",
+      "embedUrl": "https://open.spotify.com/embed/playlist/37i9dQZF1DX8Kgdykz6OKj",
+      "externalUrl": "https://open.spotify.com/playlist/37i9dQZF1DX8Kgdykz6OKj",
+      "genres": ["ambient", "experimental"],
+      "moods": ["relaxed", "atmospheric", "introspective"]
+    },
+    {
+      "id": "2",
+      "title": "Playlist 2:Electronic Essentials",
+      "subtitle": "Timeless tracks from electronic music pioneers",
+      "description": "From early synth explorations to contemporary productions, this playlist charts the evolution of electronic music. Essential listening for anyone interested in the genre's rich history and ongoing innovation.",
+      "platform": "spotify",
+      "embedUrl": "https://open.spotify.com/embed/playlist/37i9dQZF1DX4dyzvuaRJ0n",
+      "externalUrl": "https://open.spotify.com/playlist/37i9dQZF1DX4dyzvuaRJ0n",
+      "genres": ["electronic", "idm", "techno"],
+      "moods": ["energetic", "uplifting"]
+    },
+    {
+      "id": "3",
+      "title": "Late Night Jazz",
+      "subtitle": "Sophisticated sounds for nocturnal listening",
+      "description": "Smooth jazz, soul, and neo-soul selections perfect for late-night listening sessions. Features both classic recordings and contemporary artists keeping the tradition alive.",
+      "platform": "spotify",
+      "embedUrl": "https://open.spotify.com/embed/playlist/37i9dQZF1DX0SM0LYsmbMT",
+      "externalUrl": "https://open.spotify.com/playlist/37i9dQZF1DX0SM0LYsmbMT",
+      "genres": ["jazz", "rnb"],
+      "moods": ["relaxed", "melancholic"]
+    },
+    {
+      "id": "4",
+      "title": "Experimental Edge",
+      "subtitle": "Pushing boundaries and challenging expectations",
+      "description": "For the adventurous listener. This collection features artists who refuse to be confined by genre conventions, creating bold, unconventional sonic experiences.",
+      "platform": "spotify",
+      "embedUrl": "https://open.spotify.com/embed/playlist/37i9dQZF1DWWqNV5cS50j6",
+      "externalUrl": "https://open.spotify.com/playlist/37i9dQZF1DWWqNV5cS50j6",
+      "genres": ["experimental", "electronic"],
+      "moods": ["intense", "dark"]
+    },
+    {
+      "id": "5",
+      "title": "House Foundations",
+      "subtitle": "Essential house music from past to present",
+      "description": "A journey through house music's evolution, from Chicago origins to global phenomenon. Includes deep house, tech house, and everything in between.",
+      "platform": "spotify",
+      "embedUrl": "https://open.spotify.com/embed/playlist/37i9dQZF1DX70RN3TfWWJh",
+      "externalUrl": "https://open.spotify.com/playlist/37i9dQZF1DX70RN3TfWWJh",
+      "genres": ["house", "electronic"],
+      "moods": ["energetic", "euphoric"]
+    },
+    {
+      "id": "6",
+      "title": "Ethereal Voices",
+      "subtitle": "Haunting vocals and atmospheric production",
+      "description": "A collection showcasing the power of the human voice in electronic and experimental contexts. From ethereal whispers to commanding performances.",
+      "platform": "spotify",
+      "embedUrl": "https://open.spotify.com/embed/playlist/37i9dQZF1DX4SBhb3fqCJd",
+      "externalUrl": "https://open.spotify.com/playlist/37i9dQZF1DX4SBhb3fqCJd",
+      "genres": ["electronic", "vocal"],
+      "moods": ["atmospheric", "ethereal"]
+    }
+  ]
+}

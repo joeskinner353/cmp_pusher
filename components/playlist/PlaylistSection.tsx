@@ -50,7 +50,8 @@ export function PlaylistSection({
                 platform={playlist.platform}
               />
 
-              {onOpenFocus && (
+              {/* Focus Mode button hidden - code kept for future use */}
+              {/* {onOpenFocus && (
                 <Button
                   onClick={onOpenFocus}
                   variant="outline"
@@ -72,7 +73,7 @@ export function PlaylistSection({
                     />
                   </svg>
                 </Button>
-              )}
+              )} */}
             </div>
 
             {/* Right Column: Player */}
