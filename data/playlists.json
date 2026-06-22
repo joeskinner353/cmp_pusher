@@ -26,12 +26,12 @@
     },
     {
       "id": "3",
-      "title": "Late Night Jazz",
-      "subtitle": "Sophisticated sounds for nocturnal listening",
-      "description": "Smooth jazz, soul, and neo-soul selections perfect for late-night listening sessions. Features both classic recordings and contemporary artists keeping the tradition alive.",
-      "platform": "spotify",
-      "embedUrl": "https://open.spotify.com/embed/playlist/37i9dQZF1DX0SM0LYsmbMT",
-      "externalUrl": "https://open.spotify.com/playlist/37i9dQZF1DX0SM0LYsmbMT",
+      "title": "Anna Clyne",
+      "subtitle": "subtitle",
+      "description": "Grammy-winning composer Anna Clyne teams up with producer Calvin Markus to create the incredible contemporary classical EP entitled Chroma Cycles. Scroll down to hear her first collaboration with the Pusher Music team, the epic Four Corners suite was performed by the Bournemouth Symphony Orchestra and recorded Pusher's studios in Dorset, UK. ",
+      "platform": "disco",
+      "embedUrl": "https://concord-music-publishing.disco.ac/e/p/20106082?download=true&territory_ids=%5B2877086%5D&s=SQ0LKItj0L4kk2eaMCynooCAFew%3AeOmNIeJS&artwork=true&color=%234E98FF&theme=dark",
+      "externalUrl": "https://concord-music-publishing.disco.ac/e/p/20106082?download=true&territory_ids=%5B2877086%5D&s=SQ0LKItj0L4kk2eaMCynooCAFew%3AeOmNIeJS&artwork=true&color=%234E98FF&theme=dark",
       "genres": ["jazz", "rnb"],
       "moods": ["relaxed", "melancholic"]
     },
