@@ -17,11 +17,11 @@ export function Hero({
   className,
 }: HeroProps) {
   return (
-    <section className={cn('relative py-20 md:py-32 lg:py-40', className)}>
+    <section className={cn('relative min-h-screen flex items-center justify-center', className)}>
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-linear-to-b from-gray-900/50 to-gray-950 pointer-events-none" />
 
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative py-20">
         <ScrollReveal>
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-100 tracking-tight text-balance">
