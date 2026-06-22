@@ -38,6 +38,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable} dark`}
+      suppressHydrationWarning
     >
       <body className="min-h-screen bg-gray-950 text-gray-100 antialiased">
         {children}
