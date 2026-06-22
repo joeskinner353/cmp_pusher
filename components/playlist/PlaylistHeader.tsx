@@ -10,6 +10,7 @@ interface PlaylistHeaderProps {
   subtitle?: string;
   description?: any[];
   className?: string;
+  hideTitle?: boolean;
 }
 
 const portableTextComponents = {
@@ -47,17 +48,20 @@ export function PlaylistHeader({
   subtitle,
   description,
   className,
+  hideTitle = false,
 }: PlaylistHeaderProps) {
   return (
     <div className={cn('space-y-4', className)}>
-      <div>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-100 mb-2 text-balance">
-          {title}
-        </h2>
-        {subtitle && (
-          <p className="text-lg md:text-xl text-gray-400 text-balance">{subtitle}</p>
-        )}
-      </div>
+      {!hideTitle && (
+        <div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-100 mb-2 text-balance">
+            {title}
+          </h2>
+          {subtitle && (
+            <p className="text-lg md:text-xl text-gray-400 text-balance">{subtitle}</p>
+          )}
+        </div>
+      )}
 
       {description && description.length > 0 && (
         <div className="prose prose-invert max-w-none">

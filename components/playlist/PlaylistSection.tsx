@@ -2,6 +2,7 @@
 
 'use client';
 
+import { useState } from 'react';
 import { Playlist } from '@/types/playlist';
 import { PlaylistHeader } from './PlaylistHeader';
 import { PlaylistMeta } from './PlaylistMeta';
@@ -23,6 +24,8 @@ export function PlaylistSection({
   onOpenFocus,
   className,
 }: PlaylistSectionProps) {
+  const [isExpanded, setIsExpanded] = useState(true);
+
   return (
     <ScrollReveal>
       <section
@@ -33,14 +36,40 @@ export function PlaylistSection({
         )}
       >
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Left Column: Content */}
-            <div className="space-y-6">
-              <PlaylistHeader
-                title={playlist.title}
-                subtitle={playlist.subtitle}
-                description={playlist.description}
-              />
+          {/* Header with Toggle Button */}
+          <div className="flex items-start justify-between gap-4 mb-6">
+            <div className="flex-1">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
+                {playlist.title}
+              </h2>
+              {playlist.subtitle && (
+                <p className="mt-2 text-lg md:text-xl text-gray-400">
+                  {playlist.subtitle}
+                </p>
+              )}
+            </div>
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="shrink-0 w-10 h-10 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors flex items-center justify-center text-gray-300 hover:text-white"
+              aria-label={isExpanded ? 'Minimize playlist' : 'Expand playlist'}
+            >
+              <span className="text-2xl leading-none" aria-hidden="true">
+                {isExpanded ? '−' : '+'}
+              </span>
+            </button>
+          </div>
+
+          {/* Collapsible Content */}
+          {isExpanded && (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+              {/* Left Column: Content */}
+              <div className="space-y-6">
+                <PlaylistHeader
+                  title={playlist.title}
+                  subtitle={playlist.subtitle}
+                  description={playlist.description}
+                  hideTitle={true}
+                />
 
               <PlaylistMeta
                 genres={playlist.genres}
@@ -98,6 +127,7 @@ export function PlaylistSection({
               />
             </div>
           </div>
+          )}
         </div>
       </section>
     </ScrollReveal>
