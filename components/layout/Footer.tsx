@@ -23,7 +23,7 @@ export function Footer({ socialLinks }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-100 mb-4">Pusher</h3>
+            <h3 className="text-2xl font-bold text-gray-100 mb-4">CMP & Pusher</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               A curated music discovery platform featuring hand-picked playlists across
               genres and moods.
@@ -92,7 +92,7 @@ export function Footer({ socialLinks }: FooterProps) {
 
         <div className="mt-12 pt-8 border-t border-gray-800">
           <p className="text-gray-500 text-sm text-center">
-            © {currentYear} Pusher. All rights reserved.
+            © {currentYear} CMP & Pusher. All rights reserved.
           </p>
         </div>
       </div>

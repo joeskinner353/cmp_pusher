@@ -40,22 +40,29 @@ export function PlaylistSection({
       <section
         id={playlist.slug.current}
         className={cn(
-          'py-12 md:py-16 lg:py-20 border-b border-gray-800 last:border-b-0',
+          isExpanded 
+            ? 'py-12 md:py-16 lg:py-20' 
+            : 'py-6 md:py-8',
+          'border-b border-gray-800 last:border-b-0',
           className
         )}
       >
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           {/* Header with Toggle Button */}
-          <div className="flex items-start justify-between gap-4 mb-6">
+          <div className={cn(
+            "flex items-start justify-between gap-4",
+            isExpanded ? "mb-6" : "mb-0"
+          )}>
             <div className="flex-1">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
                 {playlist.title}
               </h2>
-              {playlist.subtitle && (
+              {/* Subtitle hidden - code kept for future use */}
+              {/* {playlist.subtitle && (
                 <p className="mt-2 text-lg md:text-xl text-gray-400">
                   {playlist.subtitle}
                 </p>
-              )}
+              )} */}
             </div>
             <button
               onClick={() => setIsExpanded(!isExpanded)}

@@ -15,16 +15,16 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pusher - Curated Music Discovery",
+  title: "CMP & Pusher - Curated Music Discovery",
   description: "A premium music discovery platform featuring hand-picked playlists across genres and moods.",
   openGraph: {
-    title: "Pusher - Curated Music Discovery",
+    title: "CMP & Pusher - Curated Music Discovery",
     description: "A premium music discovery platform featuring hand-picked playlists across genres and moods.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pusher - Curated Music Discovery",
+    title: "CMP & Pusher - Curated Music Discovery",
     description: "A premium music discovery platform featuring hand-picked playlists across genres and moods.",
   },
 };
